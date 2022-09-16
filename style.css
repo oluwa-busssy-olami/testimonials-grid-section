@@ -1,0 +1,142 @@
+:root {
+    --Moderateviolet: hsl(263, 55%, 52%);
+    --Verydarkgrayishblue: hsl(217, 19%, 35%);
+    --Verydarkblackishblue: hsl(219, 29%, 14%);
+    --White: hsl(0, 0%, 100%);
+    --Lightgray: hsl(0, 0%, 81%);
+    --Lightgrayishblue: hsl(210, 46%, 95%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: var(--Lightgray);
+    min-height: 100vh;
+    display: flex;
+    font-size: 13px;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+}
+main {
+    max-width: 1150px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 2, min-content;
+    grid-gap: 20px;
+}
+
+.testimony {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--Verydarkgrayishblue);
+    padding: 30px 40px;
+    border-radius: 15px;
+}
+
+.details {
+    display: flex;
+    align-items: center;
+    color: var(--Lightgray);
+    margin-bottom: 20px;
+}
+
+.details img {
+    border-radius: 50%;
+    border: 2px solid var(--White);
+    margin-right: 10px;
+    width: 3rem;
+}
+
+.details .name h2 {
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.details .name p {
+    opacity: 50%;
+}
+
+h1 {
+    color: var(--White);
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.jonattan-para,
+.daniel-para,
+.p-para {
+    color: var(--Lightgray);
+    line-height: 1.5;
+    opacity: 70%;
+}
+
+.daniel {
+    grid-column: 1/3;
+    background-color: var(--Moderateviolet);
+    background-image: url(images/bg-pattern-quotation.svg);
+    background-repeat: no-repeat;
+    background-position: 80% 0;
+    border-radius: 10px;
+}
+
+.jonattan {
+    grid-column: 3/4;
+}
+
+.jeanette {
+    grid-column: 1/2;
+    grid-row: 2/3;
+    background-color: var(--White);
+}
+
+.patrick {
+    grid-column: 2/4;
+    grid-row: 2/3;
+}
+
+.kira {
+    grid-row: 1/3;
+    grid-column: 4/5;
+    background-color: var(--White);
+}
+
+.jeanette {
+    background: var(--White);
+}
+
+.jeanette h1,
+.kira h1 {
+    color: var(--Verydarkblackishblue);
+}
+
+.patrick {
+    background: var(--Verydarkblackishblue);
+}
+
+.patrick h1 {
+    color: var(--Lightgrayishblue);
+}
+
+.jeanette .name h2,
+.jeanette-para,
+.kira .name h2,
+.kira-para {
+    color: hsl(226, 6%, 56%);
+}
+
+@media (max-width: 875px) {
+    main {
+        padding: 24px 32px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-size: 14px;
+        min-height: 100vh;
+    }
+}
